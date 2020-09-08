@@ -38,6 +38,23 @@ install:
     - if "%PlatformToolset%"=="v141" call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" %archi%
     - if "%PlatformToolset%"=="v142" call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" %archi%
 
+    # Free disk space for boost zip package
+    - rmdir /q /s C:\Python26
+    - rmdir /q /s C:\Python26-x64
+    - rmdir /q /s C:\Python27
+    - rmdir /q /s C:\Python27-x64
+    - rmdir /q /s C:\Python33
+    - rmdir /q /s C:\Python33-x64
+    - rmdir /q /s C:\Python34
+    - rmdir /q /s C:\Python34-x64
+    - rmdir /q /s C:\Python35
+    - rmdir /q /s C:\Python35-x64
+    - rmdir /q /s C:\Python36
+    - rmdir /q /s C:\Python36-x64
+    - rmdir /q /s C:\Python37
+    - rmdir /q /s C:\Python37-x64
+    #- rmdir /q /s C:\Libraries\boost_*
+
 build:
     verbosity: minimal
 
